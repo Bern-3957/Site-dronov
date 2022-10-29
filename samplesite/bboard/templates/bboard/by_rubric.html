@@ -1,0 +1,17 @@
+{% extends 'basic.html' %}
+
+{% block title %}Рубрика: {{ current_rubric.name }}{% endblock %}
+
+
+{% block content %}
+<h1>Рубрика: {{ current_rubric.name }}</h1>
+{% for bb in bbs %}
+    <div>
+        <h1>{{ bb.title }}</h1>
+        <p>{{ bb.content }}</p>
+        <p>{{ bb.published|date:"d.m.Y H:i:s" }}</p>
+    </div>
+{% endfor %}
+
+{% endblock %}
+

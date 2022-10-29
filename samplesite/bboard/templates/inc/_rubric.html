@@ -1,0 +1,6 @@
+{% load bboard_tags %}
+
+{% get_categories as rubrics %}
+{% for rubric in rubrics %}
+    <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
+{% endfor %}

@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Главная{% endblock %} :: Доска объявлений</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bboard/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Объявления</h1>
+    </header>
+    <nav>
+        <a href="{% url 'index' %}">Главная</a>
+        <a href="{% url 'add' %}">Добавить</a>
+        {% include 'inc/_rubric.html' %}
+    </nav>
+    <section>
+        {% block content %}
+        {% endblock %}
+    </section>
+    <img src=D:\Site-dronov\samplesite\bboard\static\bboard\images.jpg" alt="2">
+</body>
+</html>
